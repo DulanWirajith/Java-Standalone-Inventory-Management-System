@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/malinthaagancy</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">mysql</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="show_sql">true</property>
+        <property name="hbm2ddl.auto">create-drop</property>
+        <mapping class="com.malintha_agency.model.Invoice" />
+        <mapping class="com.malintha_agency.model.Invoice_Cheque" />
+        <mapping class="com.malintha_agency.model.Invoice_Product" />
+        <mapping class="com.malintha_agency.model.Order" />
+        <mapping class="com.malintha_agency.model.Order_Detail" />
+        <mapping class="com.malintha_agency.model.Payment" />
+        <mapping class="com.malintha_agency.model.Payment_Chque" />
+        <mapping class="com.malintha_agency.model.ReturnedNotice" />
+        <mapping class="com.malintha_agency.model.Route" />
+        <mapping class="com.malintha_agency.model.Shop" />
+        <mapping class="com.malintha_agency.model.Supplier" />
+        <mapping class="com.malintha_agency.model.Users" />
+    </session-factory>
+</hibernate-configuration>
